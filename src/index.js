@@ -58,7 +58,7 @@ module.exports = {
   flank: function (obj, func) {
     var results = [];
     if (!R.isEmpty(obj)) {
-      R.forEach((x) => {
+      R.forEach(function (x) {
         var v = obj[x];
         results.push(func(x, v));
       }, obj);
