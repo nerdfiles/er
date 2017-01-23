@@ -15,7 +15,9 @@ var R = {
   tap: require('ramda/src/tap'),
   is: require('ramda/src/is'),
   slice: require('ramda/src/slice'),
-  F: require('ramda/src/F')
+  F: require('ramda/src/F'),
+  isEmpty: require('ramda/src/isEmpty'),
+  forEach: require('ramda/src/forEach')
 };
 
 // ================================================================= Internals =
