@@ -11,7 +11,3 @@ ES6 + Ramda considerations for fun and profit!
 ### Watchers
 
     $ npm run test/watch
-
-## Bye
-
-🍄
