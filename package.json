@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-register",
     "test/watch": "mocha --watch --compilers js:babel-register"
   },
-  "author": "",
+  "author": "nerdfiles <nerdfiles@gmail.com>",
   "license": "WTFPL",
   "dependencies": {
     "ramda": "^0.23.0"
