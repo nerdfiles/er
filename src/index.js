@@ -18,7 +18,8 @@ var R = {
   F: require('ramda/src/F'),
   isEmpty: require('ramda/src/isEmpty'),
   forEach: require('ramda/src/forEach'),
-  compose: require('ramda/src/compose')
+  compose: require('ramda/src/compose'),
+  difference: require('ramda/src/difference')
 };
 
 // ================================================================= Internals =
@@ -43,6 +44,16 @@ module.exports = {
   exec: R.ifElse(R.compose(R.type, R.is(Function)), R.tap, R.clone),
 
   ass: R.ifElse(R.isArrayLike, R.slice, R.F),
+
+  diff: function (array1, array2) {
+    return R.difference(array1, array2);
+  },
+
+  build: function (f) {
+    return function () {
+      return R.compose(f);
+    };
+  },
 
   flank: function (obj, func) {
     var results = [];
