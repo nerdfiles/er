@@ -5,7 +5,7 @@
 
 // =================================================================== Needful =
 
-import { ass, exec } from './src/index';
+import { diff, ass, exec } from './src/index';
 
 // ============================================================ Implementation =
 
@@ -13,4 +13,4 @@ exec(function () {
   console.log('tap');
 });
 
-console.log(ass([3, 3])());
+console.log(diff([3, 3, 9], [3, 4]));

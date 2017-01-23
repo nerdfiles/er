@@ -6,7 +6,7 @@
 // =================================================================== Needful =
 
 import { assert } from 'chai';
-import { peel, exec } from '../src/index';
+import { diff, peel, exec } from '../src/index';
 
 // ===================================================================== Tests =
 
@@ -26,16 +26,22 @@ describe('er... muh tools', function () {
       var someArray = [1, 2, 3, 4, 9];
       assert.deepEqual(firstItem, peel(someArray));
     });
+
+    it('should take the difference of two arrays', function () {
+      var array1 = [3, 3, 9];
+      var array2 = [3, 4];
+      assert.isArray(diff(array1, array2), 'a list of differences');
+    });
   });
 
   describe('for functions', function () {
 
-    it('should tap a function', function () {
+    // it('should tap a function', function () {
 
-      exec(function () {
-        console.log('tap');
-      });
-    });
+    //   exec(function () {
+    //     console.log('tap');
+    //   });
+    // });
   });
 
 });
