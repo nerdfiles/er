@@ -1,7 +1,9 @@
 /* @fileOverview ./src/index.js
  * @description
- * Er... (Learning ES6.)
+ * Er... (Learning ES6 in combination with Ramda.)
  */
+
+// =================================================================== Needful =
 
 var R = {
   ifElse: require('ramda/src/ifElse'),
@@ -15,6 +17,8 @@ var R = {
   slice: require('ramda/src/slice')
 };
 
+// ================================================================= Internals =
+
 var delay = function () {
   return setTimeout(arguments[1], arguments[0]);
 };
@@ -22,6 +26,8 @@ var delay = function () {
 var interval = function () {
   return setInterval(arguments[1], arguments[0]);
 };
+
+// ============================================================ Implementation =
 
 module.exports = {
   delay: delay,
