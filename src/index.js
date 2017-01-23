@@ -14,7 +14,8 @@ var R = {
   type: require('ramda/src/type'),
   tap: require('ramda/src/tap'),
   is: require('ramda/src/is'),
-  slice: require('ramda/src/slice')
+  slice: require('ramda/src/slice'),
+  F: require('ramda/src/F')
 };
 
 // ================================================================= Internals =
@@ -38,7 +39,7 @@ module.exports = {
 
   poke: R.ifElse(R.chain(R.type, R.is(Function)), R.tap, R.clone),
 
-  // ass: R.ifElse(R.isArrayLike, R.slice(null), R.F),
+  ass: R.ifElse(R.isArrayLike, R.slice, R.F),
 
   flank: function (obj, func) {
     var results = [];
