@@ -5,8 +5,10 @@
 
 // =================================================================== Needful =
 
-import { peel, exec } from './src/index';
+import { ass, exec } from './src/index';
 
 exec(function () {
   console.log('tap');
 });
+
+console.log(ass([3, 3])());

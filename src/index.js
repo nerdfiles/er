@@ -17,7 +17,8 @@ var R = {
   slice: require('ramda/src/slice'),
   F: require('ramda/src/F'),
   isEmpty: require('ramda/src/isEmpty'),
-  forEach: require('ramda/src/forEach')
+  forEach: require('ramda/src/forEach'),
+  compose: require('ramda/src/compose')
 };
 
 // ================================================================= Internals =
@@ -39,7 +40,7 @@ module.exports = {
 
   peel: R.ifElse(R.isArrayLike, R.head, R.clone),
 
-  exec: R.ifElse(R.chain(R.type, R.is(Function)), R.tap, R.clone),
+  exec: R.ifElse(R.compose(R.type, R.is(Function)), R.tap, R.clone),
 
   ass: R.ifElse(R.isArrayLike, R.slice, R.F),
 
