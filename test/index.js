@@ -32,7 +32,9 @@ describe('er... muh tools', function () {
 
     it('should tap a function', function () {
 
-      exec();
+      exec(function () {
+        console.log('tap');
+      });
     });
   });
 

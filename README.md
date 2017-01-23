@@ -14,4 +14,4 @@ ES6 + Ramda considerations for fun and profit!
 
 ## Bye
 
-😏
+🍄
