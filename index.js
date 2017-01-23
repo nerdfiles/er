@@ -7,6 +7,8 @@
 
 import { ass, exec } from './src/index';
 
+// ============================================================ Implementation =
+
 exec(function () {
   console.log('tap');
 });
