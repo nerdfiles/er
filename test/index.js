@@ -6,7 +6,7 @@
 // =================================================================== Needful =
 
 import { assert } from 'chai';
-import { peel } from '../src/index';
+import { peel, exec } from '../src/index';
 
 // ===================================================================== Tests =
 
@@ -25,6 +25,14 @@ describe('er... muh tools', function () {
       var firstItem = 1;
       var someArray = [1, 2, 3, 4, 9];
       assert.deepEqual(firstItem, peel(someArray));
+    });
+  });
+
+  describe('for functions', function () {
+
+    it('should tap a function', function () {
+
+      exec();
     });
   });
 

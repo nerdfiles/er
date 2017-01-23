@@ -39,7 +39,7 @@ module.exports = {
 
   peel: R.ifElse(R.isArrayLike, R.head, R.clone),
 
-  poke: R.ifElse(R.chain(R.type, R.is(Function)), R.tap, R.clone),
+  exec: R.ifElse(R.chain(R.type, R.is(Function)), R.tap, R.clone),
 
   ass: R.ifElse(R.isArrayLike, R.slice, R.F),
 
